@@ -1,0 +1,113 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+/* Tags */
+body {
+	background: url('../images/core/bg1.jpg') no-repeat 50% 50% fixed;
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	margin: 0;
+	font-family: "Open Sans", serif;
+	color: #454545;
+}
+
+a { text-decoration: none; color: #0493CC; }
+a:hover { color: #012E40 }
+
+/* Classes */
+
+
+/* Fixes & Basic Styles */
+.clear { clear: both; }
+
+/* Button Styles */
+.btn {
+	color: #FFF;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.btn-solid1, .btn-holo1 {
+	padding: 2%;
+	margin: 10px 0;
+	width: 96%;
+	display: block;
+	font-size: 22px;
+	font-family: "Open Sans", serif;
+}
+
+.btn-solid1 { border: none; background: #0493CC; }
+.btn-solid1:hover { background: #048ABF; }
+
+.btn-holo1 { 
+	border: 1px solid #0493CC; 
+	background: #FFF; 
+	color: #0493CC;
+	transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+}
+
+.btn-holo1:hover { background: #0493CC; color: #FFF; }
+
+/* Login Area */
+
+.login-wrapper {
+	width: 500px;
+	background: #FFF;
+	border-radius:15px;
+	margin: 30px auto 0;
+}
+
+.login-header, .login-body { padding: 15px 25px; }
+
+.login-header {
+	background: #363b46;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	color: #FFF;
+	font-size: 28px;
+	text-align: center;
+}
+
+.login-hr {
+	display: block;
+	height: 2px;
+	background: #363b46;
+	position: relative;
+	text-align: center;
+	margin: 25px 0;
+}
+
+.login-hr span {
+	background: #fff;
+	position: absolute;
+	top: -11px;
+	margin-left: -20px;
+	padding: 0 10px;
+}
+
+.login-title {
+	color: #363b46;
+	text-align: center;
+	font-size: 22px;
+}
+
+.login-link { font-size: 12px; float: right; }
+.login-body form input { display: block; }
+.login-body form input[type="submit"] { width: 100%; cursor: pointer; }
+
+.login-body form input[type="text"], .login-body form input[type="password"] {
+	font-family: "Open Sans", serif;
+	font-size: 14px;
+	border-radius: 3px;
+	background: #FFF;
+	border: 1px solid rgba(0,0,0,0.2);
+	padding: 2%;
+	width: 96%;
+	margin: 10px 0;
+	color: #454545;
+	outline: none;
+}
