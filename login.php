@@ -4,7 +4,7 @@
 	<title>Real Estate Website</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body class="bg-cover bg1">
 	<div class="login-wrapper">
 		<div class="login-header">
 			Some title

@@ -2,11 +2,6 @@
 
 /* Tags */
 body {
-	background: url('../images/core/bg1.jpg') no-repeat 50% 50% fixed;
-	background-size: cover;
-	-moz-background-size: cover;
-	-webkit-background-size: cover;
-	-o-background-size: cover;
 	margin: 0;
 	font-family: "Open Sans", serif;
 	color: #454545;
@@ -16,6 +11,16 @@ a { text-decoration: none; color: #0493CC; }
 a:hover { color: #012E40 }
 
 /* Classes */
+.wrapper { width: 80%; margin: 0 auto; }
+.bg1 { background: url('../images/core/bg1.jpg'); }
+.bg-cover {
+	background-repeat: no-repeat;
+	background-position: 50% 50% fixed;
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+}
 
 
 /* Fixes & Basic Styles */
