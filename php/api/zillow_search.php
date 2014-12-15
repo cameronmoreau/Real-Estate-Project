@@ -1,6 +1,6 @@
 <?php
 	header("content-type: json");
-	require("api_inc.php");
+	require("inc.php");
 
 	
 
