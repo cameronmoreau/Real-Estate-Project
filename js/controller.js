@@ -23,9 +23,6 @@ angular.module('app.controllers', [])
 					$scope.results.address = data.results[0];
 					$scope.results.address.county = $scope.find_address_county();
 				}
-
-				console.log($scope.results);
-				console.log(data.results);
 			}).
 			error(function(data) {
 				console.log('Error with json');
@@ -34,7 +31,7 @@ angular.module('app.controllers', [])
 
 	$scope.strip_to_address = function(key) {
 		$scope.results.address = $scope.results.address[key];
-		console.log($scope.results);
+		$scope.results.address.county = $scope.find_address_county();
 	}
 
 	$scope.find_address_county = function() {
@@ -50,5 +47,16 @@ angular.module('app.controllers', [])
 		}
 
 		return false;
+	}
+
+	$scope.test_scrape = function() {
+		var id = "38180500001940000";
+		$http.get('php/web_scrape/dallas.php?account='+id).
+			success(function(data) {
+				$scope.results.property = data;
+			}).
+			error(function(data) {
+				console.log("error getting county");
+			});
 	}
 }]);
