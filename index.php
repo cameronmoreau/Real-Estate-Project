@@ -22,42 +22,6 @@
 			</div>
 		</div>
 
-		<!-- Test scrape -->
-		<br>
-		<button ng-click="test_scrape()"><strong>Scrape DCAD:</strong> 00000273256000000</button>
-		<div class="row" ng-show="results.property">
-			<div class="col-md-6">
-				<h3>Owner</h3>
-				<table class="table table-striped">
-					<tr>
-						<td>Owner Name</td>
-						<td>{{ results.property.owner }}</td>
-					</tr>
-					<tr>
-						<td>Mailing Address</td>
-						<td>{{ results.property.owner_address }}</td>
-					</tr>
-				</table>
-			</div>
-			<div class="col-md-6">
-				<h3>Temperary values</h3>
-				<table class="table table-striped">
-					<tr>
-						<td>Improvment Value</td>
-						<td>{{ results.property.value_improvement }}</td>
-					</tr>
-					<tr>
-						<td>Land Value</td>
-						<td>{{ results.property.value_land }}</td>
-					</tr>
-					<tr>
-						<td>Total Value</td>
-						<td>{{ results.property.value_total }}</td>
-					</tr>
-				</table>
-			</div>
-		</div>
-
 		<!-- Multiple Results from search -->
 		<div class="row" ng-show="results.address.length > 1">
 			<div class="col-md-12">
@@ -104,6 +68,40 @@
 
 			<!-- Address Map -->
 			<h3>Map</h3>
+		</div>
+
+		<!-- Test scrape -->
+		<div class="row" ng-show="results.property">
+			<div class="col-md-6">
+				<h3>Owner</h3>
+				<table class="table table-striped">
+					<tr>
+						<td>Owner Name</td>
+						<td>{{ results.property.owner }}</td>
+					</tr>
+					<tr>
+						<td>Mailing Address</td>
+						<td>{{ results.property.owner_address }}</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-md-6">
+				<h3>Temperary values</h3>
+				<table class="table table-striped">
+					<tr>
+						<td>Improvment Value</td>
+						<td>{{ results.property.value_improvement }}</td>
+					</tr>
+					<tr>
+						<td>Land Value</td>
+						<td>{{ results.property.value_land }}</td>
+					</tr>
+					<tr>
+						<td>Total Value</td>
+						<td>{{ results.property.value_total }}</td>
+					</tr>
+				</table>
+			</div>
 		</div>
 	</div>
 

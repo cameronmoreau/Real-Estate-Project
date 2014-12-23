@@ -1,12 +1,21 @@
 <?php
 	header("content-type: json");
 
-	if(isset($_GET["account"])) {
+	if(isset($_GET["street"]) && isset($_GET["number"])) {
 		#SANITIZE
-		$account = $_GET["account"];
+		$street = strtoupper($_GET["street"]);
+		$street_number = $_GET["number"];
+		$account = "";
+
+		require("../inc/db.php");
+		mysql_select_db("real_estate_webscrape");
+		$query = mysql_query("SELECT * FROM dallas_county_accounts WHERE street_number='$street_number' AND street LIKE '$street'");
+		while($row = mysql_fetch_assoc($query)) {
+			//print_r($row);
+			$account = $row["account_id"];
+		}
 
 		$values = array();
-
 		$ch = curl_init("http://www.dallascad.org/AcctDetailRes.aspx?ID=".$account);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		$site = curl_exec($ch);
